@@ -1,5 +1,5 @@
 main: 
-	cc -lcurl -o c main.c
+	cc -Wall -Wextra -Werror -lcurl -lpthread -o c main.c
 
 fclean:
 	rm -f c
