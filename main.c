@@ -144,7 +144,7 @@ void *downloader(void *data)
 
 int main(int argc, char **argv) {
 
-  if (argc < 2 || argc > 4) {
+  if (argc != 4) {
     printf("Usage: %s <url> <outfile> <concurrent files> \n", argv[0]);
     return 1;
   }
