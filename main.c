@@ -58,6 +58,7 @@ int main(int argc, char **argv) {
     write_to_file(file, chunk.data);
     curl_easy_cleanup(curl);
   }
+  free(chunk.data);
   fclose(file);
   return 0;
 }
