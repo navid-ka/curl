@@ -157,6 +157,10 @@ int main(int argc, char **argv) {
   pthread_t th[num_threads];
   t_data data[num_threads];
   long file_size = get_file_size(argv[1]);
+  if (file_size < 0) {
+    fprintf(stderr, "Failed to get file size\n");
+    return 1;
+  }
   printf("File size: %ld\n", file_size);
   for (size_t i = 0; i < num_threads; i++) {
     data[i].url = argv[1];
